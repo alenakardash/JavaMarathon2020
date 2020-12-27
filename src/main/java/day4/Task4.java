@@ -15,10 +15,13 @@ public class Task4 {
         int sum;
         int maxSum = 0;
         int index = 0;
+        int step = 3;
 
-        for (int i = 0; i < mas.length - 2; i++) {
+        for (int i = 0; i < mas.length - (step - 1); i++) {
             sum = 0;
-            sum = mas[i] + mas[i + 1] + mas[i + 2];
+            for (int j = 0; j < step; j++) {
+                sum += mas[i + j];
+            }
 
             if (sum > maxSum) {
                 maxSum = sum;

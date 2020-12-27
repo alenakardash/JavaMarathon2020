@@ -26,40 +26,30 @@ public class Task1 {
         System.out.println("Длина массива: " + mas.length);
 
         int moreThanEight = 0;
+        int equalToOne = 0;
+        int evenNumbers = 0;
+        int oddNumbers = 0;
+        int sum = 0;
 
         for (int number : mas) {
             if (number > 8) {
                 moreThanEight++;
             }
-        }
-        System.out.println("Количество чисел больше 8: " + moreThanEight);
-
-        int equalToOne = 0;
-
-        for (int number : mas) {
             if (number == 1) {
                 equalToOne++;
             }
-        }
-        System.out.println("Количество чисел равных 1: " + equalToOne);
-
-        int evenNumbers = 0;
-        int oddNumbers = 0;
-
-        for (int number : mas) {
             if (number % 2 == 0) {
                 evenNumbers++;
             } else {
                 oddNumbers++;
             }
-        }
-        System.out.println("Количество четных чисел: " + evenNumbers);
-        System.out.println("Количество нечетных чисел: " + oddNumbers);
-
-        int sum = 0;
-        for (int number : mas) {
             sum += number;
         }
+
+        System.out.println("Количество чисел больше 8: " + moreThanEight);
+        System.out.println("Количество чисел равных 1: " + equalToOne);
+        System.out.println("Количество четных чисел: " + evenNumbers);
+        System.out.println("Количество нечетных чисел: " + oddNumbers);
         System.out.println("Сумма всех чисел в массиве: " + sum);
 
     }
