@@ -20,6 +20,7 @@ public class TestFigures {
 
     public static double calculateRedArea(Figure[] figures) {
         double resultArea = 0;
+
         for (Figure figure : figures) {
             if (figure.getColor().equals("Red")) {
                 resultArea += figure.area();
