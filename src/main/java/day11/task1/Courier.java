@@ -33,6 +33,7 @@ public class Courier implements Worker {
     public void bonus() {
         if (warehouse.getCountDeliveredOrders() >= 10000 && isPayed == false) {
             salary += 50000;
+            isPayed = true;
         } else if (warehouse.getCountDeliveredOrders() < 10000) {
             System.out.println("Бонус пока не доступен");
         } else {
