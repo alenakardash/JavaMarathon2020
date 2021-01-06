@@ -5,7 +5,6 @@ public class Magician extends Hero implements MagicAttack {
 
     public Magician() {
         super();
-        health = MAX_HEALTH;
         physAtt = 5;
         magicAtt = 20;
         magicDef = 0.8;

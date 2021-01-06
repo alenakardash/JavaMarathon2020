@@ -5,7 +5,6 @@ public class Shaman extends Hero implements Healer, MagicAttack {
 
     public Shaman() {
         super();
-        health = MAX_HEALTH;
         physAtt = 10;
         magicAtt = 15;
         magicDef = 0.2;

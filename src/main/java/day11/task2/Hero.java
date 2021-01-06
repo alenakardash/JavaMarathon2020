@@ -9,6 +9,10 @@ public abstract class Hero implements PhysAttack {
     double magicDef;
     double physAtt;
 
+    public Hero() {
+        health = MAX_HEALTH;
+    }
+
 
     public void setHealth(double health) {
         if (health > MAX_HEALTH) {
