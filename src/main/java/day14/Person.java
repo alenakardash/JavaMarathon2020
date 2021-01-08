@@ -13,11 +13,9 @@ public class Person {
         return name;
     }
 
-   public int getAge() {
+    public int getAge() {
         return age;
     }
-
-
 
     public String toString() {
         return "{name=\'" + name + "\', year=" + age + "}";

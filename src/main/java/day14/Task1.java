@@ -25,20 +25,18 @@ public class Task1 {
             scanner.close();
 
             if (list.size() != 10) {
-                try {
-                    throw new IncorrectInput();
-                } catch (IncorrectInput e) {
-                    System.out.println("Некорректный входной файл");
-                }
+                throw new IncorrectInput();
 
             } else {
-                for (Integer x : list) {
-                    sum += x;
+                for (Integer value : list) {
+                    sum += value;
                 }
                 System.out.println(sum);
             }
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
+        } catch (IncorrectInput e) {
+            System.out.println("Некорректный входной файл");
         }
     }
 }

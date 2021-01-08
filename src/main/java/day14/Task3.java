@@ -27,13 +27,7 @@ public class Task3 {
                 int age = Integer.parseInt(mas[1]);
                 if (age < 0) {
                     list = new ArrayList<>();
-                    try {
-                        throw new IncorrectInput();
-                    } catch (IncorrectInput e) {
-                        System.out.println("Некорректный входной файл");
-                        scanner.close();
-                        return null;
-                    }
+                    throw new IncorrectInput();
                 } else {
                     list.add(new Person(name, age));
                 }
@@ -42,6 +36,9 @@ public class Task3 {
             return list;
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
+            return null;
+        } catch (IncorrectInput e) {
+            System.out.println("Некорректный входной файл");
             return null;
         }
 

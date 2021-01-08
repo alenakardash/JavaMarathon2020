@@ -25,13 +25,8 @@ public class Task2 {
                 int x = Integer.parseInt(mas[1]);
                 if (x < 0) {
                     list = new ArrayList<>();
-                    try {
-                        throw new IncorrectInput();
-                    } catch (IncorrectInput e) {
-                        System.out.println("Некорректный входной файл");
-                        scanner.close();
-                        return null;
-                    }
+                    scanner.close();
+                    throw new IncorrectInput();
                 } else {
                     list.add(line);
                 }
@@ -42,8 +37,10 @@ public class Task2 {
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
             return null;
+        } catch (IncorrectInput e) {
+            System.out.println("Некорректный входной файл");
+            return null;
         }
-
     }
 
 }
